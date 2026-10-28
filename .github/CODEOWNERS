@@ -1,0 +1,10 @@
+# Revisores automáticos por área (PGC 2 e 5.2).
+#
+# Mudanças em pipelines, scripts e configuração do projeto são de maior risco:
+# o Desenvolvedor Líder é sempre chamado para revisar.
+
+/.github/            @Higor-de-Medeiros-Santana
+/scripts/            @Higor-de-Medeiros-Santana
+/project.godot       @Higor-de-Medeiros-Santana
+/export_presets.cfg  @Higor-de-Medeiros-Santana
+/addons/             @Higor-de-Medeiros-Santana

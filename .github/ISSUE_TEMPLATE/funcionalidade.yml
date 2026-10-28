@@ -1,0 +1,27 @@
+name: Funcionalidade
+description: Proponha uma nova funcionalidade ou melhoria
+title: 'feat: '
+labels: ['funcionalidade']
+body:
+  - type: textarea
+    id: problema
+    attributes:
+      label: Qual necessidade do jogo isto atende?
+    validations:
+      required: true
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Critérios de aceitação
+      placeholder: |
+        - [ ] O jogador consegue...
+        - [ ] O jogo impede...
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options: [menu/interface, modo aventura, dados/probabilidade, áudio/assets, pipeline/infra]
+    validations:
+      required: true

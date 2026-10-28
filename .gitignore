@@ -9,6 +9,7 @@ build/
 
 # Credenciais de exportação (nunca versionar)
 export_credentials.cfg
+.env
 
 # Sistema operacional
 Thumbs.db

@@ -1,0 +1,10 @@
+# Normaliza finais de linha: evita que máquinas Windows gravem CRLF
+# em scripts que rodam no Linux dos runners do GitHub.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.jfif binary
+*.webp binary
+*.avif binary
+*.mp3 binary
+*.pdf binary
