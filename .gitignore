@@ -1,0 +1,16 @@
+# Cache do editor da Godot 4
+.godot/
+
+# Builds gerados (publicados nas Releases, não versionados)
+build/
+
+# Arquivos temporários do editor
+*.tmp
+
+# Credenciais de exportação (nunca versionar)
+export_credentials.cfg
+
+# Sistema operacional
+Thumbs.db
+desktop.ini
+.DS_Store

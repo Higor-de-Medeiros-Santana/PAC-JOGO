@@ -1,0 +1,178 @@
+[gd_scene format=3 uid="uid://bjc5ndwx6jmp7"]
+
+[ext_resource type="Script" uid="uid://tfbae6ggy8yg" path="res://scripts/FimJogo.gd" id="1_rxks3"]
+[ext_resource type="AudioStream" uid="uid://q0cbejk7b7tu" path="res://assets/musica/lightyeartraxx-kl-peach-game-over-iii-142453.mp3" id="2_jmybt"]
+[ext_resource type="Texture2D" uid="uid://dgjqv3hvory3s" path="res://assets/imagens/kkk95.jpg" id="2_rtbq6"]
+[ext_resource type="Texture2D" uid="uid://dmbpsm81mrkun" path="res://assets/Icons/linha-de-chegada-3d-icon-png-download-9841151.webp" id="4_dw0r5"]
+[ext_resource type="Texture2D" uid="uid://bi72ujb7w2ioc" path="res://assets/Icons/replay-button-3d-icon-png-download-4820140.webp" id="5_rtbq6"]
+[ext_resource type="Texture2D" uid="uid://b0fxfiid4keht" path="res://assets/Icons/Captura de tela 2026-06-18 230059-Photoroom.png" id="7_f10rh"]
+[ext_resource type="Texture2D" uid="uid://gnxest8uop1f" path="res://assets/Icons/casa-3d-icon-png-download-5220257.webp" id="8_xmydc"]
+[ext_resource type="Texture2D" uid="uid://duebfb6wmn8e4" path="res://assets/Icons/casino-chip-composition-3d-design-elements-free-png.webp" id="9_t5rwm"]
+[ext_resource type="Texture2D" uid="uid://d2eoudx7v80gn" path="res://assets/Icons/cube.png" id="10_be1qe"]
+
+[sub_resource type="SystemFont" id="SystemFont_wh7gu"]
+font_names = PackedStringArray("Cambria")
+
+[sub_resource type="SystemFont" id="SystemFont_nerbu"]
+font_names = PackedStringArray("Corbel")
+
+[sub_resource type="SystemFont" id="SystemFont_20p3i"]
+font_names = PackedStringArray("Book Antiqua")
+
+[node name="EndScreen" type="Control" unique_id=460749157]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 3.0
+offset_right = 8.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rxks3")
+
+[node name="Background" type="TextureRect" parent="." unique_id=489991385]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.046
+anchor_bottom = 1.422
+offset_left = 8.0
+offset_top = 2.0
+offset_right = -48.880005
+offset_bottom = -298.84003
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rtbq6")
+
+[node name="TitleLabel" type="Label" parent="." unique_id=387664901]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -249.0
+offset_top = -262.0
+offset_right = 351.0
+offset_bottom = -201.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.9, 0.2, 1)
+theme_override_font_sizes/font_size = 44
+text = "            Jogo Concluído!"
+horizontal_alignment = 1
+
+[node name="VBox" type="VBoxContainer" parent="." unique_id=60424920]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.61700004
+anchor_top = 0.5
+anchor_right = 0.61700004
+anchor_bottom = 0.5
+offset_left = -412.76007
+offset_top = -159.0
+offset_right = 158.23993
+offset_bottom = 306.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="RankLabel" type="Label" parent="VBox" unique_id=13148947]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_wh7gu")
+theme_override_font_sizes/font_size = 30
+text = "Mestre dos Dados!"
+horizontal_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="VBox" unique_id=1753261702]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_nerbu")
+theme_override_font_sizes/font_size = 25
+text = "
+Pontuação Final: 0"
+horizontal_alignment = 1
+
+[node name="AccuracyLabel" type="Label" parent="VBox" unique_id=1385147584]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_20p3i")
+theme_override_font_sizes/font_size = 23
+text = "
+Precisão Total: 0%"
+horizontal_alignment = 1
+
+[node name="RollsLabel" type="Label" parent="VBox" unique_id=648654638]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = " 
+ Total de Lançamentos: 0"
+horizontal_alignment = 1
+
+[node name="Separator" type="HSeparator" parent="VBox" unique_id=1038805377]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="RestartButton" type="Button" parent="VBox" unique_id=1550269273]
+custom_minimum_size = Vector2(280, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "       Jogar Novamente"
+
+[node name="ReplayButton3dIconPngDownload4820140" type="Sprite2D" parent="VBox/RestartButton" unique_id=309798252]
+position = Vector2(166, 32.00006)
+scale = Vector2(0.093333334, 0.07999999)
+texture = ExtResource("5_rtbq6")
+
+[node name="MenuButton" type="Button" parent="VBox" unique_id=1494351534]
+custom_minimum_size = Vector2(280, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "  Menu Principal"
+
+[node name="Casa3dIconPngDownload5220257" type="Sprite2D" parent="VBox/MenuButton" unique_id=2049173979]
+position = Vector2(157, 29.000061)
+scale = Vector2(0.12444448, 0.11111106)
+texture = ExtResource("8_xmydc")
+
+[node name="Fim-jogo" type="AudioStreamPlayer" parent="VBox" unique_id=237809507]
+stream = ExtResource("2_jmybt")
+autoplay = true
+
+[node name="LinhaDeChegada3dIconPngDownload9841151" type="Sprite2D" parent="VBox" unique_id=1871696073]
+position = Vector2(62.000027, -94.000015)
+scale = Vector2(0.28083336, 0.22361109)
+texture = ExtResource("4_dw0r5")
+
+[node name="CapturaDeTela20260618230059Photoroom" type="Sprite2D" parent="." unique_id=418355536]
+position = Vector2(712.00006, 128.00002)
+scale = Vector2(0.8087379, 0.86619717)
+texture = ExtResource("7_f10rh")
+
+[node name="CasinoChipComposition3dDesignElementsFreePng" type="Sprite2D" parent="." unique_id=533844498]
+position = Vector2(182, 296)
+scale = Vector2(0.40306124, 0.4096939)
+texture = ExtResource("9_t5rwm")
+
+[node name="CasinoChipComposition3dDesignElementsFreePng2" type="Sprite2D" parent="." unique_id=1491396121]
+position = Vector2(1111.9999, 521)
+scale = Vector2(0.37602034, 0.35663265)
+texture = ExtResource("9_t5rwm")
+
+[node name="Cube" type="Sprite2D" parent="." unique_id=709805876]
+position = Vector2(139, 608)
+scale = Vector2(0.07145835, 0.06979172)
+texture = ExtResource("10_be1qe")
+
+[node name="Cube2" type="Sprite2D" parent="." unique_id=1297839881]
+position = Vector2(1142, 143)
+scale = Vector2(0.08479166, 0.073958375)
+texture = ExtResource("10_be1qe")
+
+[connection signal="pressed" from="VBox/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="VBox/MenuButton" to="." method="_on_menu_button_pressed"]
