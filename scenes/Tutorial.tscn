@@ -1,0 +1,123 @@
+[gd_scene format=3 uid="uid://dw0otpspgkfqv"]
+
+[ext_resource type="Script" uid="uid://dqw55h1b4t4r" path="res://scripts/Tutorial.gd" id="1_ci5ev"]
+[ext_resource type="Texture2D" uid="uid://bbt3unskl7hsq" path="res://assets/imagens/fu74.png" id="2_pgr2e"]
+[ext_resource type="AudioStream" uid="uid://bjbtf0i0cpsnx" path="res://assets/musica/music_for_videos-swing-110485.mp3" id="3_pgr2e"]
+
+[node name="TutorialScene" type="Control" unique_id=588959991]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ci5ev")
+
+[node name="Background" type="TextureRect" parent="." unique_id=2147445435]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_pgr2e")
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1865963372]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -327.0
+offset_top = -291.0
+offset_right = 334.0
+offset_bottom = -201.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+text = "📖 Tutorial — Dice Mind"
+horizontal_alignment = 1
+
+[node name="VBox" type="VBoxContainer" parent="." unique_id=301414829]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -398.0
+offset_top = -161.0
+offset_right = 362.0
+offset_bottom = 339.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="IconLabel" type="Label" parent="VBox" unique_id=704270359]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "🎲"
+horizontal_alignment = 1
+
+[node name="TitleLabel" type="Label" parent="VBox" unique_id=23489376]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 26
+text = "Título"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="TextLabel" type="Label" parent="VBox" unique_id=119391422]
+custom_minimum_size = Vector2(0, 160)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85, 0.85, 0.85, 1)
+theme_override_font_sizes/font_size = 17
+text = "Texto"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PageLabel" type="Label" parent="VBox" unique_id=2120070573]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 1)
+text = "1 / 5"
+horizontal_alignment = 1
+
+[node name="HBox" type="HBoxContainer" parent="VBox" unique_id=1587902355]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="PrevButton" type="Button" parent="VBox/HBox" unique_id=1242530366]
+custom_minimum_size = Vector2(140, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+disabled = true
+text = "← Anterior"
+
+[node name="NextButton" type="Button" parent="VBox/HBox" unique_id=801045512]
+custom_minimum_size = Vector2(140, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Próximo →"
+
+[node name="BackButton" type="Button" parent="VBox" unique_id=707912950]
+custom_minimum_size = Vector2(200, 44)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "← Voltar ao Menu"
+
+[node name="Musica-Fundo-t" type="AudioStreamPlayer" parent="." unique_id=749916998]
+stream = ExtResource("3_pgr2e")
+volume_db = -9.75
+autoplay = true
+
+[connection signal="pressed" from="VBox/HBox/PrevButton" to="." method="_on_prev_button_pressed"]
+[connection signal="pressed" from="VBox/HBox/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="VBox/BackButton" to="." method="_on_back_button_pressed"]
