@@ -1,0 +1,39 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  verificar:
+    name: Verificar projeto
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Conferir arquivos do projeto Godot
+        run: |
+          test -f project.godot
+          test -f export_presets.cfg
+          test -d scenes && test -d scripts && test -d assets
+          echo "Estrutura do projeto conferida."
+
+  staging:
+    name: Deploy em staging
+    needs: verificar
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publicar versão de teste
+        run: echo "Versão ${GITHUB_SHA::7} publicada em staging para testes."
+
+  production:
+    name: Deploy em production
+    needs: staging
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publicar versão oficial
+        run: echo "Versão ${GITHUB_SHA::7} aprovada e publicada em production."
