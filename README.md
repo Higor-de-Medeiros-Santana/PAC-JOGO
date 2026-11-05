@@ -3,6 +3,8 @@
 Jogo educacional sobre probabilidade, com temática de dados/cassino, desenvolvido na
 Godot Engine (GDScript) no contexto do Projeto de Aprendizagem Colaborativa (PAC).
 
+Integrantes : Higor de Medeiros, Felipe Silveira, Gustavo Henrique Forte e Jenifer Alves Scherpinski.
+
 ## Estrutura do repositório
 
 Organização definida na seção 4.3 do Plano de Gerenciamento de Configuração
