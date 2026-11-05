@@ -3,6 +3,8 @@ extends Control
 # Tela de fim de run do Modo Aventura: mostra se o jogador venceu o
 # chefe final ou foi derrotado, e um resumo da run.
 
+const Historia = preload("res://scripts/Historia.gd")
+
 @onready var _titulo_label: Label = $VBox/TituloLabel
 @onready var _stats_label: Label = $VBox/StatsLabel
 
@@ -17,12 +19,15 @@ func _ready() -> void:
 		_titulo_label.text = "💀 Sua run terminou no Andar %d" % RunManager.floor_index
 		_titulo_label.modulate = Color(1, 0.4, 0.4)
 
-	_stats_label.text = "Moedas coletadas: %d\nRelíquias obtidas: %d\nAndar alcançado: %d / %d" % [
+	var resumo: String = "Moedas coletadas: %d\nRelíquias obtidas: %d\nAndar alcançado: %d / %d" % [
 		RunManager.coins,
 		RunManager.relics.size(),
 		RunManager.floor_index,
 		RunManager.map.size() - 1,
 	]
+	# Epílogo da história antes do resumo da run.
+	_stats_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	_stats_label.text = Historia.epilogo(venceu) + "\n\n" + resumo
 
 
 func _on_restart_button_pressed() -> void:

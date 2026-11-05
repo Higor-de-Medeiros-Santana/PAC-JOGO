@@ -4,6 +4,8 @@ extends Control
 # jogos como Pokelike/Slay the Spire: o jogador escolhe o caminho
 # entre combates, eventos, lojas e descansos até enfrentar o chefe.
 
+const Historia = preload("res://scripts/Historia.gd")
+
 const LARGURA_MAPA := 480.0
 const ESPACO_ANDAR := 150.0
 const RAIO_NO := 28.0
@@ -25,6 +27,74 @@ func _ready() -> void:
 	RunManager.coins_changed.connect(func(_c): _atualizar_hud())
 	_atualizar_hud()
 	_montar_mapa()
+	_narrar_proximo_andar()
+
+
+# Mostra a história do próximo andar (uma vez por andar), com a dica do Pip.
+func _narrar_proximo_andar() -> void:
+	var proximo: int = RunManager.floor_index + 1
+	if proximo >= RunManager.map.size() or proximo <= RunManager.ultimo_andar_narrado:
+		return
+	var dados: Dictionary = Historia.andar(proximo)
+	if dados.is_empty():
+		return
+	RunManager.ultimo_andar_narrado = proximo
+	_mostrar_painel_historia(dados)
+
+
+func _mostrar_painel_historia(dados: Dictionary) -> void:
+	# Fundo escurecido que também impede cliques no mapa enquanto o painel está aberto.
+	var fundo := ColorRect.new()
+	fundo.color = Color(0, 0, 0, 0.8)
+	fundo.mouse_filter = Control.MOUSE_FILTER_STOP
+	add_child(fundo)
+	fundo.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+
+	var centro := CenterContainer.new()
+	fundo.add_child(centro)
+	centro.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+
+	var painel := PanelContainer.new()
+	painel.custom_minimum_size = Vector2(540, 0)
+	centro.add_child(painel)
+
+	var margem := MarginContainer.new()
+	for lado in ["left", "right", "top", "bottom"]:
+		margem.add_theme_constant_override("margin_" + lado, 24)
+	painel.add_child(margem)
+
+	var caixa := VBoxContainer.new()
+	caixa.add_theme_constant_override("separation", 14)
+	margem.add_child(caixa)
+
+	var titulo := Label.new()
+	titulo.text = String(dados["titulo"])
+	titulo.add_theme_font_size_override("font_size", 26)
+	titulo.add_theme_color_override("font_color", Color(1, 0.9, 0.4))
+	titulo.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	titulo.custom_minimum_size = Vector2(490, 0)
+	caixa.add_child(titulo)
+
+	var texto := Label.new()
+	texto.text = String(dados["texto"])
+	texto.add_theme_font_size_override("font_size", 18)
+	texto.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	texto.custom_minimum_size = Vector2(490, 0)
+	caixa.add_child(texto)
+
+	var dica := Label.new()
+	dica.text = "💡 Dica do Pip: " + String(dados["dica"])
+	dica.add_theme_font_size_override("font_size", 17)
+	dica.add_theme_color_override("font_color", Color(1, 0.55, 0.55))
+	dica.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	dica.custom_minimum_size = Vector2(490, 0)
+	caixa.add_child(dica)
+
+	var botao := Button.new()
+	botao.text = "Entendi, vamos lá! 🎲"
+	botao.custom_minimum_size = Vector2(0, 48)
+	botao.pressed.connect(func(): fundo.queue_free())
+	caixa.add_child(botao)
 
 
 func _atualizar_hud() -> void:
