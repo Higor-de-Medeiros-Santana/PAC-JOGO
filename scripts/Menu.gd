@@ -31,7 +31,8 @@ func _on_play_button_pressed() -> void:
 
 func _on_adventure_button_pressed() -> void:
 	RunManager.start_new_run()
-	get_tree().change_scene_to_file("res://scenes/Mapa.tscn")
+	# O prólogo conta a história e leva ao mapa (dá para pular).
+	get_tree().change_scene_to_file("res://scenes/Intro.tscn")
 
 
 func _on_quit_button_pressed() -> void:

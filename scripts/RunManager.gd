@@ -30,6 +30,8 @@ var current_node_id: String = ""
 var completed_nodes: Array = []
 var map: Array = []
 var run_ativa: bool = false
+# Último andar cuja narrativa (Historia.gd) já foi exibida no mapa.
+var ultimo_andar_narrado: int = 0
 
 
 func start_new_run() -> void:
@@ -39,6 +41,7 @@ func start_new_run() -> void:
 	relics.clear()
 	completed_nodes.clear()
 	floor_index = 0
+	ultimo_andar_narrado = 0
 	run_ativa = true
 	_gerar_mapa()
 	var no_inicial: Dictionary = map[0][0]

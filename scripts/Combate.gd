@@ -6,6 +6,7 @@ extends Control
 const CENA_DADO = preload("res://scenes/Dado.tscn")
 const BET_TYPES_BOSS := ["odd_even", "sum", "range"]
 const TAMANHO_CELULA_DADO := 120.0
+const Historia = preload("res://scripts/Historia.gd")
 
 var _config: Dictionary = {}
 var _dados: Array = []
@@ -34,7 +35,9 @@ func _ready() -> void:
 	var no: Dictionary = RunManager.get_no_atual()
 	_config = RunManager.get_config_combate(no)
 
-	_enemy_name_label.text = String(_config["nome_inimigo"])
+	var eh_boss: bool = no["type"] == RunManager.NodeType.BOSS
+	var eh_elite: bool = no["type"] == RunManager.NodeType.ELITE
+	_enemy_name_label.text = Historia.nome_inimigo(int(no["floor"]), eh_elite, eh_boss)
 	_vida_inimiga_max = _config["vida_inimiga"]
 	_vida_inimiga = _vida_inimiga_max
 	_enemy_hp_bar.max_value = _vida_inimiga_max
@@ -45,6 +48,11 @@ func _ready() -> void:
 
 	_montar_dados()
 	_iniciar_fase_atual()
+
+	# Fala do inimigo na primeira rodada, antes da aposta.
+	var fala: String = Historia.fala_inimigo(int(no["floor"]), eh_elite, eh_boss)
+	if fala != "":
+		_feedback_label.text = fala + "\n\nFaça sua aposta!"
 
 
 func _montar_dados() -> void:
@@ -231,7 +239,7 @@ func _causar_dano_inimigo() -> void:
 		var fase_esperada: int = int((_vida_inimiga_max - _vida_inimiga) / vida_por_fase)
 		if fase_esperada > _fase_boss_atual:
 			_fase_boss_atual = fase_esperada
-			_feedback_label.text += "\n⚠ O chefe muda de estratégia!"
+			_feedback_label.text += "\n⚠ O chefe muda de estratégia!\n" + Historia.fala_boss_fase(_fase_boss_atual)
 
 
 func _causar_dano_jogador() -> void:
