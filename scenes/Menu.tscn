@@ -1,167 +1,76 @@
-[gd_scene format=3 uid="uid://cp6hmdj22npel"]
+[gd_scene format=3 uid="uid://c8yvfti1inhco"]
 
-[ext_resource type="Script" uid="uid://b11ddfphi75y8" path="res://scripts/Menu.gd" id="1"]
-[ext_resource type="AudioStream" uid="uid://bjbtf0i0cpsnx" path="res://assets/musica/music_for_videos-swing-110485.mp3" id="2_0ykhv"]
-[ext_resource type="Texture2D" uid="uid://ca8yjawbx8q0" path="res://assets/Icons/Group 2 (1).png" id="3_b6cxs"]
-[ext_resource type="Texture2D" uid="uid://scqwbog7rfv8" path="res://assets/Icons/cube2-Photoroom.png" id="4_o0tnf"]
-[ext_resource type="Texture2D" uid="uid://d2eoudx7v80gn" path="res://assets/Icons/cube.png" id="5_jmdev"]
-[ext_resource type="Texture2D" uid="uid://u6ac4mhjm242" path="res://assets/Icons/DICE MIND-Photoroom.png" id="7_aaywf"]
+[ext_resource type="Script" uid="uid://cr8n0j88x5ul4" path="res://scripts/menu.gd" id="1_el213"]
+[ext_resource type="Texture2D" uid="uid://doek1fgnfojfn" path="res://Assets/imagens/Estudo Mágico à Luz da Lua.png" id="2_4umqm"]
+[ext_resource type="Texture2D" uid="uid://cuhdg8827mf8s" path="res://Assets/imagens/Logo NeuroMind com Cérebro Neon e Placa RLM.png" id="3_el213"]
+[ext_resource type="Texture2D" uid="uid://d4lr8uy8fjkkg" path="res://Assets/imagens/Botão Dourado do Modo Aventura (1).png" id="4_pp5m5"]
+[ext_resource type="Texture2D" uid="uid://b6p700fj10gwu" path="res://Assets/imagens/Ícone de alto-falante dourado em azul glossy.png" id="5_yt8fu"]
+[ext_resource type="Texture2D" uid="uid://gg8bev43qr7w" path="res://Assets/imagens/Ícone Dourado de Som Silenciado.png" id="6_4umqm"]
+[ext_resource type="Texture2D" uid="uid://cprrub7svu4so" path="res://Assets/imagens/Botão Azul “Sair” com Ícone Dourado.png" id="8_el213"]
+[ext_resource type="Texture2D" uid="uid://dhf3apc368sfg" path="res://Assets/imagens/Emblema de Engrenagem Dourada e Azul.png" id="8_yt8fu"]
+[ext_resource type="Texture2D" uid="uid://cmu5s6j7pf0g2" path="res://Assets/imagens/Dado Estudioso com Livro Roxo.png" id="10_thu7x"]
 
-[sub_resource type="SystemFont" id="SystemFont_jmdev"]
-font_names = PackedStringArray("Sitka Heading")
+[node name="MenuT10" type="Node2D" unique_id=575374808]
+script = ExtResource("1_el213")
 
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_b6cxs"]
+[node name="Background" type="TextureRect" parent="." unique_id=2014357992]
+offset_left = 2.0
+offset_right = 1299.0
+offset_bottom = 730.0
+texture = ExtResource("2_4umqm")
+expand_mode = 1
 
-[sub_resource type="SystemFont" id="SystemFont_aaywf"]
-font_names = PackedStringArray("Segoe UI Emoji")
+[node name="EmblemaDouradoDiceMindDeProbabilidade" type="Sprite2D" parent="." unique_id=972820724]
+position = Vector2(644.99994, 158.00002)
+scale = Vector2(0.2573717, 0.27361885)
+texture = ExtResource("3_el213")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6cxs"]
-bg_color = Color(0.25882354, 0, 0, 1)
+[node name="Aventura" type="TextureButton" parent="." unique_id=1014162595]
+offset_left = 450.0
+offset_top = 321.0
+offset_right = 883.0
+offset_bottom = 481.0
+texture_normal = ExtResource("4_pp5m5")
+ignore_texture_size = true
+stretch_mode = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aaywf"]
-bg_color = Color(1, 1, 1, 1)
+[node name="Som" type="TextureButton" parent="." unique_id=1418672599]
+offset_top = 41.0
+offset_right = 154.0
+offset_bottom = 114.0
+texture_normal = ExtResource("5_yt8fu")
+ignore_texture_size = true
+stretch_mode = 5
 
-[sub_resource type="Gradient" id="Gradient_bg"]
-colors = PackedColorArray(0.16, 0.03, 0.04, 1, 0.03, 0.02, 0.03, 1)
+[node name="Sem-som" type="TextureButton" parent="Som" unique_id=1506430501]
+visible = false
+layout_mode = 0
+offset_top = 2.0
+offset_right = 154.0
+offset_bottom = 75.0
+texture_normal = ExtResource("6_4umqm")
+ignore_texture_size = true
+stretch_mode = 5
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_bg"]
-gradient = SubResource("Gradient_bg")
-width = 512
-height = 512
-fill = 1
-fill_from = Vector2(0.5, 0.35)
-fill_to = Vector2(0.5, 1)
+[node name="Sair" type="TextureButton" parent="." unique_id=1586694393]
+offset_left = 411.0
+offset_top = 481.0
+offset_right = 925.0
+offset_bottom = 625.0
+texture_normal = ExtResource("8_el213")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="MainMenu" type="Control" unique_id=1772421544]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1")
+[node name="Surpresa" type="TextureButton" parent="." unique_id=483622795]
+offset_left = 1085.0
+offset_top = 524.0
+offset_right = 1281.0
+offset_bottom = 680.0
+texture_normal = ExtResource("8_yt8fu")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="Background" type="TextureRect" parent="." unique_id=82841930]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("GradientTexture2D_bg")
-
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1738851475]
-layout_mode = 1
-anchors_preset = -1
-anchor_bottom = 0.5
-offset_left = 387.0
-offset_top = 17.0
-offset_right = 989.0
-offset_bottom = 359.0
-texture = ExtResource("3_b6cxs")
-stretch_mode = 4
-
-[node name="TitleLabel" type="Label" parent="." unique_id=824314383]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -1355.0
-offset_top = 92.0
-offset_right = -687.0
-offset_bottom = 211.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = SubResource("SystemFont_jmdev")
-theme_override_font_sizes/font_size = 64
-theme_override_styles/focus = SubResource("StyleBoxLine_b6cxs")
-horizontal_alignment = 1
-
-[node name="SubtitleLabel" type="Label" parent="." unique_id=1752688647]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -1408.0
-offset_top = -43.0
-offset_right = -730.0
-offset_bottom = 42.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = SubResource("SystemFont_aaywf")
-theme_override_font_sizes/font_size = 30
-horizontal_alignment = 1
-
-[node name="VBox" type="VBoxContainer" parent="." unique_id=1136424031]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -207.0
-offset_top = 53.0
-offset_right = 258.0
-offset_bottom = 278.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 20
-alignment = 1
-
-[node name="PlayButton" type="Button" parent="VBox" unique_id=335727358]
-custom_minimum_size = Vector2(300, 60)
-layout_mode = 2
-theme_override_font_sizes/font_size = 22
-theme_override_styles/normal = SubResource("StyleBoxFlat_b6cxs")
-text = "▶  Modo Clássico"
-
-[node name="AdventureButton" type="Button" parent="VBox"]
-custom_minimum_size = Vector2(300, 60)
-layout_mode = 2
-theme_override_font_sizes/font_size = 22
-theme_override_styles/normal = SubResource("StyleBoxFlat_b6cxs")
-text = "🗺  Modo Aventura"
-
-[node name="TutorialButton" type="Button" parent="VBox" unique_id=1207786732]
-custom_minimum_size = Vector2(300, 60)
-layout_mode = 2
-theme_override_font_sizes/font_size = 22
-text = "📖  Tutorial"
-
-[node name="QuitButton" type="Button" parent="VBox" unique_id=61816061]
-custom_minimum_size = Vector2(300, 60)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0.0015497573, 0.012201134, 1)
-theme_override_font_sizes/font_size = 22
-theme_override_styles/normal = SubResource("StyleBoxFlat_aaywf")
-text = "🚪  Sair"
-
-[node name="Musica-Fundo-menu" type="AudioStreamPlayer" parent="." unique_id=316710249]
-stream = ExtResource("2_0ykhv")
-autoplay = true
-
-[node name="Cube2Photoroom" type="Sprite2D" parent="." unique_id=1031203421]
-position = Vector2(70.00006, 571)
-scale = Vector2(0.042187527, 0.04098958)
-texture = ExtResource("4_o0tnf")
-
-[node name="Cube" type="Sprite2D" parent="." unique_id=436684472]
-position = Vector2(1166, 175.00005)
-scale = Vector2(0.042916667, 0.04114583)
-texture = ExtResource("5_jmdev")
-
-[node name="DiceMindPhotoroom" type="Sprite2D" parent="." unique_id=1691195134]
-position = Vector2(694.00006, 290.00003)
-scale = Vector2(0.46848968, 0.44814816)
-texture = ExtResource("7_aaywf")
-
-[connection signal="pressed" from="VBox/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="VBox/AdventureButton" to="." method="_on_adventure_button_pressed"]
-[connection signal="pressed" from="VBox/TutorialButton" to="." method="_on_tutorial_button_pressed"]
-[connection signal="pressed" from="VBox/QuitButton" to="." method="_on_quit_button_pressed"]
+[node name="DadoSorri" type="Sprite2D" parent="." unique_id=1772556704]
+position = Vector2(212, 456)
+scale = Vector2(0.26128757, 0.24553923)
+texture = ExtResource("10_thu7x")

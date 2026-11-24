@@ -1,83 +1,137 @@
+
 extends Node
 
-# Gerenciador.gd - Autoload (Singleton)
-# Gerencia estado global: fase, pontuação, histórico
+# FASE 1
+var estrelas_fase_1: int = 0
+var fase_1_concluida: bool = false
+var animar_estrelas_fase_1: bool = false
+
+# FASE 2
+var estrelas_fase_2: int = 0
+var fase_2_concluida: bool = false
+var animar_estrelas_fase_2: bool = false
+
+# FASE 3
+var estrelas_fase_3: int = 0
+var fase_3_concluida: bool = false
+var animar_estrelas_fase_3: bool = false
 
 
-signal fase_alterada(fase: int)
-signal score_changed(score: int)
+# =========================
+# FASE 1
+# =========================
 
-var current_phase: int = 1
-var score: int = 0
-var total_rolls: int = 0
-var acertos: int = 0
+func salvar_estrelas_fase_1(quantidade: int) -> void:
+	estrelas_fase_1 = maxi(
+		estrelas_fase_1,
+		clampi(quantidade, 0, 3)
+	)
 
-const MAX_PHASE = 2
-
-const PHASE_CONFIG = [
-	{},  # índice 0 não usado
-	# Fase 1 - Número exato
-	{"dice_count": 1, "sides": 6, "bet_type": "exact",
-	 "rolls_needed": 5, "description": "Adivinhe o número exato!"},
-	# Fase 2 - Par ou ímpar
-	{"dice_count": 1, "sides": 6, "bet_type": "odd_even",
-	 "rolls_needed": 8, "description": "Par ou ímpar?"},
-]
-
-var historico_rolagens: Array = []
-var historico_previsoes: Array = []
+	fase_1_concluida = true
+	animar_estrelas_fase_1 = true
 
 
-func _ready() -> void:
-	reset_game()
+func obter_estrelas_fase_1() -> int:
+	return estrelas_fase_1
 
 
-func reset_game() -> void:
-	current_phase = 1
-	score = 0
-	total_rolls = 0
-	acertos = 0
-	historico_rolagens.clear()
-	historico_previsoes.clear()
+func verificar_fase_1_concluida() -> bool:
+	return fase_1_concluida
 
 
-func get_phase_config() -> Dictionary:
-	if current_phase <= MAX_PHASE:
-		return PHASE_CONFIG[current_phase]
-	return PHASE_CONFIG[MAX_PHASE]
+func consumir_animacao_fase_1() -> bool:
+	var resultado: bool = animar_estrelas_fase_1
+	animar_estrelas_fase_1 = false
+	return resultado
 
 
-func register_roll(resultado: int, previsto: int, acertou: bool) -> void:
-	total_rolls += 1
-	historico_rolagens.append(resultado)
-	historico_previsoes.append(acertou)
-	if acertou:
-		acertos += 1
-		var cfg_fase = get_phase_config()
-		score += _calcular_pontos(cfg_fase)
-		score_changed.emit(score)
+# =========================
+# FASE 2
+# =========================
+
+func salvar_estrelas_fase_2(quantidade: int) -> void:
+	estrelas_fase_2 = maxi(
+		estrelas_fase_2,
+		clampi(quantidade, 0, 3)
+	)
+
+	fase_2_concluida = true
+	animar_estrelas_fase_2 = true
 
 
-func _calcular_pontos(cfg: Dictionary) -> int:
-	if cfg.get("bet_type", "exact") == "exact":
-		return 100
-	return 150
+func obter_estrelas_fase_2() -> int:
+	return estrelas_fase_2
 
 
-func advance_phase() -> void:
-	if current_phase < MAX_PHASE:
-		current_phase += 1
-		fase_alterada.emit(current_phase)
+func verificar_fase_2_concluida() -> bool:
+	return fase_2_concluida
 
 
-func get_accuracy() -> float:
-	if total_rolls == 0:
-		return 0.0
-	return float(acertos) / float(total_rolls) * 100.0
+func consumir_animacao_fase_2() -> bool:
+	var resultado: bool = animar_estrelas_fase_2
+	animar_estrelas_fase_2 = false
+	return resultado
 
 
-func get_frequency_map() -> Dictionary:
-	var frequencia: Dictionary = {}
-	for r in historico_rolagens:
-		frequencia[r] = frequencia.get(r, 0) + 1
-	return frequencia
+# =========================
+# FASE 3
+# =========================
+
+func salvar_estrelas_fase_3(quantidade: int) -> void:
+	estrelas_fase_3 = maxi(
+		estrelas_fase_3,
+		clampi(quantidade, 0, 3)
+	)
+
+	fase_3_concluida = true
+	animar_estrelas_fase_3 = true
+
+
+func obter_estrelas_fase_3() -> int:
+	return estrelas_fase_3
+
+
+func verificar_fase_3_concluida() -> bool:
+	return fase_3_concluida
+
+
+func consumir_animacao_fase_3() -> bool:
+	var resultado: bool = animar_estrelas_fase_3
+	animar_estrelas_fase_3 = false
+	return resultado
+# =========================
+# FASE 4
+# =========================
+
+# FASE 4
+var estrelas_fase_4: int = 0
+var fase_4_concluida: bool = false
+var animar_estrelas_fase_4: bool = false
+
+
+func salvar_estrelas_fase_4(quantidade: int) -> void:
+
+	estrelas_fase_4 = maxi(
+		estrelas_fase_4,
+		clampi(quantidade, 0, 3)
+	)
+
+	fase_4_concluida = true
+	animar_estrelas_fase_4 = true
+
+
+func obter_estrelas_fase_4() -> int:
+	return estrelas_fase_4
+
+
+func verificar_fase_4_concluida() -> bool:
+	return fase_4_concluida
+
+
+func consumir_animacao_fase_4() -> bool:
+
+	var resultado := animar_estrelas_fase_4
+
+	animar_estrelas_fase_4 = false
+
+	return resultado

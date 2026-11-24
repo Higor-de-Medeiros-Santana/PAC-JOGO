@@ -1,0 +1,351 @@
+[gd_scene format=3 uid="uid://b05s1dp34ehoy"]
+
+[ext_resource type="Script" uid="uid://miie3hwo1iub" path="res://scripts/fase_2.gd" id="1_itwbr"]
+[ext_resource type="Texture2D" uid="uid://dxkqsy7ioknw5" path="res://Assets/imagens/Sinapse de Serotonina em Foco.png" id="2_itwbr"]
+[ext_resource type="Texture2D" uid="uid://cgvyuv0hrwa01" path="res://Assets/Icons/Moldura Dourada Ornamental com Alvo de Arco e Flecha.png" id="2_sneny"]
+[ext_resource type="Texture2D" uid="uid://bvtp4kg8638dc" path="res://Assets/imagens/Banners Dourados da Floresta dos Padrões.png" id="3_gg0pe"]
+[ext_resource type="Texture2D" uid="uid://b2jp6s40js20e" path="res://Assets/Icons/Objetivo da Fase Dourado (1).png" id="3_itwbr"]
+[ext_resource type="Texture2D" uid="uid://dgixoobyg4k0h" path="res://Assets/imagens/Cérebro Brilhante com Lâmpada Acendida.png" id="5_gg0pe"]
+[ext_resource type="Texture2D" uid="uid://64gxu63k8nx0" path="res://Assets/imagens/Caixa_de_diálogo_dourada__Sinap_-removebg-preview.png" id="6_itwbr"]
+[ext_resource type="Texture2D" uid="uid://chuey8v3fbc8g" path="res://Assets/imagens/Bot�o Hexagonal Dourado em PNG.png" id="9_4abyg"]
+[ext_resource type="FontFile" uid="uid://dgkqwba6msgt3" path="res://Assets/fonts-dice/CormorantGaramond-Bold.ttf" id="10_hy6jg"]
+[ext_resource type="Texture2D" uid="uid://dfce3laah8xb6" path="res://Assets/Icons/image-removebg-preview (25).png" id="11_vs5b7"]
+[ext_resource type="Texture2D" uid="uid://bg8k248x8t1om" path="res://Assets/imagens/Azulejo Bord� com Borda Dourada.png" id="13_pvawg"]
+[ext_resource type="Texture2D" uid="uid://lxs2lnjv7bgy" path="res://Assets/imagens/Moldura_Dourada_com_Grade_3_3-removebg-preview.png" id="13_sneny"]
+[ext_resource type="Texture2D" uid="uid://1bautjl0lirx" path="res://Assets/imagens/Azulejo Marfim com Bordas Douradas.png" id="14_bqr7e"]
+[ext_resource type="Texture2D" uid="uid://cfrgqvg1lnvix" path="res://Assets/imagens/Azulejo Dividido Marfim e Borgonha.png" id="16_phv6s"]
+[ext_resource type="Texture2D" uid="uid://cpqh12aao6vbj" path="res://Assets/imagens/Quebra-Cabe�a M�gico Dourado.png" id="19_fpegs"]
+[ext_resource type="Texture2D" uid="uid://bxydwbwu76blw" path="res://Assets/imagens/Moldura_Dourada_de_Figura_de_Refer�ncia-removebg-preview.png" id="20_itwbr"]
+[ext_resource type="Texture2D" uid="uid://8k5s4jcxq34h" path="res://Assets/imagens/Botão Dourado “Girar (R)”.png" id="20_mhks3"]
+[ext_resource type="Texture2D" uid="uid://yqok4vrn7bxp" path="res://Assets/imagens/Zigue-zague geom�trico em bord� e branco.png" id="21_gg0pe"]
+[ext_resource type="Texture2D" uid="uid://6rfr00x2nc2x" path="res://Assets/imagens/Bot�o Dourado de Desfazer.png" id="21_m86sb"]
+[ext_resource type="Texture2D" uid="uid://bth7onl167rep" path="res://Assets/imagens/Cron�metro Dourado com Mostrador Borgonha.png" id="23_essfs"]
+[ext_resource type="Texture2D" uid="uid://cnaq8m2ojwlqb" path="res://Assets/imagens/Padr�o geom�trico diagonal vinho e branco.png" id="23_gg0pe"]
+[ext_resource type="Texture2D" uid="uid://cjiu6sibjt6tu" path="res://Assets/imagens/Pinwheel geom�trico em bord�.png" id="23_vlwts"]
+[ext_resource type="Texture2D" uid="uid://bkpkew0vag3t3" path="res://Assets/imagens/Duas Setas Douradas Brilhantes.png" id="24_k5l62"]
+[ext_resource type="Texture2D" uid="uid://cv1gwp2w1x6bp" path="res://Assets/imagens/Padr�o Geom�trico Borgonha e Branco.png" id="24_vlwts"]
+[ext_resource type="Texture2D" uid="uid://bycvuoykwbxdu" path="res://Assets/imagens/Bot�o_Dourado__Verificar_-removebg-preview.png" id="25_a1rm4"]
+[ext_resource type="Texture2D" uid="uid://b5arm72cn52lo" path="res://Assets/imagens/Padr�o Geom�trico Marrom e Branco.png" id="25_bxglp"]
+[ext_resource type="Texture2D" uid="uid://drq08due8udts" path="res://Assets/imagens/Botão Voltar Dourado em Azul.png" id="28_gg0pe"]
+
+[node name="Fase-2" type="Node2D" unique_id=672688510]
+script = ExtResource("1_itwbr")
+
+[node name="Background" type="TextureRect" parent="." unique_id=298108361]
+offset_left = -1.0
+offset_top = 3.0
+offset_right = 1280.0
+offset_bottom = 712.0
+texture = ExtResource("2_itwbr")
+expand_mode = 1
+
+[node name="MOdo-Aventura" type="TextureRect" parent="Background" unique_id=555500490]
+layout_mode = 0
+offset_left = 366.0
+offset_top = 8.0
+offset_right = 900.0
+offset_bottom = 181.0
+texture = ExtResource("3_gg0pe")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Objet" type="TextureRect" parent="Background" unique_id=800627414]
+layout_mode = 0
+offset_left = -40.0
+offset_top = 434.0
+offset_right = 438.0
+offset_bottom = 592.0
+texture = ExtResource("2_sneny")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Background/Objet" unique_id=1985556569]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 68.0
+offset_right = 399.0
+offset_bottom = 117.0
+text = "Responda aos 5 desafios para restaurar 
+as sinapses."
+
+[node name="ObjetivoDaFaseDourado(1)" type="Sprite2D" parent="Background/Objet" unique_id=1596730404]
+position = Vector2(220, 42)
+scale = Vector2(0.06917587, 0.06837019)
+texture = ExtResource("3_itwbr")
+
+[node name="DadoSorridenteNaBiblioteca(1)" type="Sprite2D" parent="Background" unique_id=1380006930]
+position = Vector2(222.99998, 159)
+scale = Vector2(0.18233673, 0.1743258)
+texture = ExtResource("5_gg0pe")
+
+[node name="TextureRect5" type="TextureRect" parent="Background" unique_id=427461626]
+layout_mode = 0
+offset_left = -258.0
+offset_top = 192.0
+offset_right = 625.0
+offset_bottom = 439.0
+texture = ExtResource("6_itwbr")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Background/TextureRect5" unique_id=1880406800]
+layout_mode = 0
+offset_left = 286.0
+offset_top = 71.0
+offset_right = 606.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Bem-vindo á Vila das Possibilidades!
+Para ativar a fonte Mágica, vamos
+resolver alguns desafios de probabilidae. 
+Pronto?"
+
+[node name="barra-estrelas" type="TextureRect" parent="Background" unique_id=1975519316]
+layout_mode = 0
+offset_left = 981.0
+offset_top = -17.0
+offset_right = 1156.0
+offset_bottom = 101.0
+texture = ExtResource("9_4abyg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="pontos" type="Label" parent="Background/barra-estrelas" unique_id=1326668674]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.14
+anchor_bottom = 0.09900001
+offset_left = 23.0
+offset_top = 42.0
+offset_right = 123.5
+offset_bottom = 59.318
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("10_hy6jg")
+theme_override_font_sizes/font_size = 23
+text = "           0/12"
+
+[node name="ImageRemovebgPreview(25)" type="Sprite2D" parent="Background/barra-estrelas" unique_id=1171169663]
+position = Vector2(42, 57)
+texture = ExtResource("11_vs5b7")
+
+[node name="TextureRect" type="TextureRect" parent="Background" unique_id=1112598739]
+layout_mode = 0
+offset_left = 642.0
+offset_top = 191.0
+offset_right = 1287.0
+offset_bottom = 605.0
+texture = ExtResource("13_sneny")
+
+[node name="b-2" type="TextureButton" parent="Background/TextureRect" unique_id=1384482148]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.062000003
+anchor_bottom = 0.052
+offset_left = 444.0
+offset_top = 148.0
+offset_right = 473.01
+offset_bottom = 192.472
+texture_normal = ExtResource("13_pvawg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="b-1" type="TextureButton" parent="Background/TextureRect" unique_id=969511302]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.062000003
+anchor_bottom = 0.052
+offset_left = 383.0
+offset_top = 149.0
+offset_right = 412.01
+offset_bottom = 193.472
+texture_normal = ExtResource("14_bqr7e")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="b-3" type="TextureButton" parent="Background/TextureRect" unique_id=1944182034]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.062000003
+anchor_bottom = 0.052
+offset_left = 507.0
+offset_top = 148.0
+offset_right = 536.01
+offset_bottom = 192.472
+texture_normal = ExtResource("16_phv6s")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="Background/TextureRect" unique_id=2105484771]
+layout_mode = 0
+offset_left = -46.0
+offset_top = -9.0
+offset_right = 688.0
+offset_bottom = 60.0
+texture = ExtResource("19_fpegs")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="b-g" type="TextureButton" parent="Background/TextureRect" unique_id=1825506383]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 278.0
+offset_right = 492.0
+offset_bottom = 380.0
+texture_normal = ExtResource("20_mhks3")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="b-d" type="TextureButton" parent="Background/TextureRect" unique_id=311072087]
+layout_mode = 0
+offset_left = 482.0
+offset_top = 287.0
+offset_right = 592.0
+offset_bottom = 369.0
+texture_normal = ExtResource("21_m86sb")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="GridContainer" type="GridContainer" parent="Background/TextureRect" unique_id=1018271910]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 75.0
+offset_right = -309.0
+offset_bottom = -67.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="TextureRect2" type="TextureRect" parent="Background" unique_id=190435195]
+layout_mode = 0
+offset_left = 415.0
+offset_top = 230.0
+offset_right = 648.0
+offset_bottom = 535.0
+texture = ExtResource("20_itwbr")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="I-1" type="TextureRect" parent="Background/TextureRect2" unique_id=613633184]
+visible = false
+layout_mode = 0
+offset_left = 24.0
+offset_top = 51.0
+offset_right = 208.0
+offset_bottom = 270.0
+texture = ExtResource("25_bxglp")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="I-2" type="TextureRect" parent="Background/TextureRect2" unique_id=1284852096]
+visible = false
+layout_mode = 0
+offset_left = 26.0
+offset_top = 46.0
+offset_right = 208.0
+offset_bottom = 272.0
+texture = ExtResource("21_gg0pe")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="I-3" type="TextureRect" parent="Background/TextureRect2" unique_id=1959810672]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 41.0
+offset_right = 209.0
+offset_bottom = 277.0
+texture = ExtResource("23_vlwts")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="I-4" type="TextureRect" parent="Background/TextureRect2" unique_id=911096292]
+visible = false
+layout_mode = 0
+offset_left = 24.0
+offset_top = 48.0
+offset_right = 208.0
+offset_bottom = 267.0
+texture = ExtResource("23_gg0pe")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="I-5" type="TextureRect" parent="Background/TextureRect2" unique_id=1044726634]
+visible = false
+layout_mode = 0
+offset_left = 25.0
+offset_top = 51.0
+offset_right = 211.0
+offset_bottom = 270.0
+texture = ExtResource("24_vlwts")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="Background" unique_id=1855189818]
+layout_mode = 0
+offset_left = 487.0
+offset_top = 624.0
+offset_right = 717.0
+offset_bottom = 695.0
+texture = ExtResource("9_4abyg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Background/TextureRect3" unique_id=1832499077]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 21.0
+offset_right = 202.0
+offset_bottom = 58.0
+text = "TESTE-156"
+
+[node name="Timer" type="Timer" parent="Background/TextureRect3" unique_id=287227935]
+
+[node name="CronômetroDouradoComMostradorBorgonha" type="Sprite2D" parent="Background/TextureRect3" unique_id=1854839573]
+position = Vector2(61.00001, 34.000008)
+scale = Vector2(0.025533525, 0.023769816)
+texture = ExtResource("23_essfs")
+
+[node name="TextureRect4" type="TextureRect" parent="Background" unique_id=623478349]
+layout_mode = 0
+offset_left = 713.0
+offset_top = 624.0
+offset_right = 943.0
+offset_bottom = 695.0
+texture = ExtResource("9_4abyg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Background/TextureRect4" unique_id=1652219052]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 21.0
+offset_right = 216.0
+offset_bottom = 63.0
+text = "Tentativas"
+
+[node name="DuasSetasDouradasBrilhantes" type="Sprite2D" parent="Background/TextureRect4" unique_id=815814430]
+position = Vector2(60.89061, 33.984383)
+scale = Vector2(0.02980548, 0.027313238)
+texture = ExtResource("24_k5l62")
+
+[node name="TextureButton" type="TextureButton" parent="Background" unique_id=758677874]
+layout_mode = 0
+offset_left = 946.0
+offset_top = 602.0
+offset_right = 1270.0
+offset_bottom = 707.0
+texture_normal = ExtResource("25_a1rm4")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Voltar" type="TextureButton" parent="Background" unique_id=1742558993]
+layout_mode = 0
+offset_left = 16.0
+offset_top = -7.0
+offset_right = 236.0
+offset_bottom = 101.0
+texture_normal = ExtResource("28_gg0pe")
+ignore_texture_size = true
+stretch_mode = 5
