@@ -1,10 +1,12 @@
-# PAC-JOGO — DiceMind: Mestre da Probabilidade
+🧠 PAC-JOGO — NeuroMind: Aventura pelo Mundo do Conhecimento
 
-Jogo educacional sobre probabilidade, com temática de dados/cassino, desenvolvido na
-Godot Engine (GDScript) no contexto do Projeto de Aprendizagem Colaborativa (PAC).
+Jogo educativo de aventura desenvolvido na Godot Engine 4.6, utilizando GDScript, no contexto do Projeto de Aprendizagem Cooperativa (PAC III).
 
-Integrantes : Higor de Medeiros, Felipe Silveira, Gustavo Henrique Forte e Jenifer Alves Scherpinski.
+O NeuroMind tem como objetivo estimular o raciocínio lógico, a percepção visual, o reconhecimento de padrões, o pensamento espacial e a resolução de problemas por meio de desafios interativos.
 
+O jogador percorre quatro fases temáticas, enfrentando enigmas e desafios para restaurar as sinapses e recuperar a fonte mágica. Durante a jornada, conta com a orientação de Sinap, personagem-guia do jogo.
+
+Integrantes: Higor de Medeiros, Felipe Silveira, Gustavo Henrique Forte e Jenifer Alves Scherpinski.
 ## Estrutura do repositório
 
 Organização definida na seção 4.3 do Plano de Gerenciamento de Configuração
