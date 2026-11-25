@@ -1,0 +1,341 @@
+[gd_scene format=3 uid="uid://cpuhx7f71todt"]
+
+[ext_resource type="Script" uid="uid://cpt17xg75qlkv" path="res://scripts/aventura.gd" id="1_r6cu7"]
+[ext_resource type="Texture2D" uid="uid://3sde40a314v0" path="res://Assets/imagens/Neurônios Luminosos em Tons de Lavanda.png" id="2_gjvgn"]
+[ext_resource type="Texture2D" uid="uid://bx6t1s5p22a1v" path="res://Assets/imagens/Orbe Roxo da Fase 1.png" id="3_44vre"]
+[ext_resource type="Texture2D" uid="uid://vpg0uyc3e8u" path="res://Assets/imagens/estrelas_vazias.png" id="4_gjvgn"]
+[ext_resource type="Texture2D" uid="uid://qhonccrm6exs" path="res://Assets/imagens/1_estrela.png" id="5_44vre"]
+[ext_resource type="Texture2D" uid="uid://dofewr8ymud5i" path="res://Assets/imagens/2_estrelas.png" id="6_86df4"]
+[ext_resource type="Texture2D" uid="uid://cvint6ka61gb0" path="res://Assets/imagens/3_estrelas.png" id="7_gf34c"]
+[ext_resource type="Texture2D" uid="uid://byeir6rspaoji" path="res://Assets/imagens/Ícone_da_Fase_2_com_Cérebro_Brilhante-removebg-preview.png" id="8_86df4"]
+[ext_resource type="Texture2D" uid="uid://iwxuwybmimoj" path="res://Assets/imagens/Orbe Neural Dourado — Fase 3.png" id="9_gf34c"]
+[ext_resource type="Texture2D" uid="uid://rxk1m84s2lb" path="res://Assets/imagens/Ícone_de_Fase_3_Bloqueada-removebg-preview.png" id="10_to8k1"]
+[ext_resource type="Texture2D" uid="uid://cserl884x3jbc" path="res://Assets/imagens/Distintivo Brilhante Fase 4.png" id="11_ed4yv"]
+[ext_resource type="Texture2D" uid="uid://daihsidytntof" path="res://Assets/imagens/Orbe do Cérebro Iluminado — Fase 4.png" id="12_gs050"]
+[ext_resource type="Texture2D" uid="uid://beflcooj4utno" path="res://Assets/imagens/Cabo Neural Roxo com Nós Dourados.png" id="13_gjvgn"]
+[ext_resource type="Texture2D" uid="uid://drq08due8udts" path="res://Assets/imagens/Botão Voltar Dourado em Azul.png" id="14_44vre"]
+[ext_resource type="Texture2D" uid="uid://dnco8knajagtt" path="res://Assets/imagens/Banner Modo Aventura com Dados Mágicos.png" id="14_gjvgn"]
+
+[node name="Aventura" type="Node2D" unique_id=747299510]
+script = ExtResource("1_r6cu7")
+metadata/_edit_horizontal_guides_ = [-1001.0]
+
+[node name="Background" type="TextureRect" parent="." unique_id=168690706]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 1282.0
+offset_bottom = 718.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_gjvgn")
+expand_mode = 1
+
+[node name="Fase-1" type="TextureButton" parent="Background" unique_id=1559546024]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.028
+offset_left = 26.0
+offset_top = 471.0
+offset_right = 232.0
+offset_bottom = 625.672
+texture_normal = ExtResource("3_44vre")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Estrelas" type="TextureRect" parent="Background/Fase-1" unique_id=764344147]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.097
+offset_left = 38.0
+offset_top = 135.0
+offset_right = 150.018
+offset_bottom = 245.0
+texture = ExtResource("4_gjvgn")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Estrelas1" type="TextureRect" parent="Background/Fase-1" unique_id=1384872360]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.097
+offset_left = 38.0
+offset_top = 135.0
+offset_right = 150.018
+offset_bottom = 245.0
+texture = ExtResource("5_44vre")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Estrelas2" type="TextureRect" parent="Background/Fase-1" unique_id=573906991]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.097
+offset_left = 38.0
+offset_top = 135.0
+offset_right = 150.018
+offset_bottom = 245.0
+texture = ExtResource("6_86df4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Estrelas3" type="TextureRect" parent="Background/Fase-1" unique_id=1266055397]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.097
+offset_left = 38.0
+offset_top = 135.0
+offset_right = 150.018
+offset_bottom = 245.0
+texture = ExtResource("7_gf34c")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Fase-2" type="TextureButton" parent="Background" unique_id=1937933183]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.028
+offset_left = 235.0
+offset_top = 230.0
+offset_right = 495.0
+offset_bottom = 408.84
+texture_normal = ExtResource("8_86df4")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Estrelas" type="TextureRect" parent="Background/Fase-2" unique_id=179354328]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.097
+offset_left = 64.0
+offset_top = -79.0
+offset_right = 162.018
+rotation = -0.002667468
+texture = ExtResource("4_gjvgn")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Estrelas1" type="TextureRect" parent="Background/Fase-2" unique_id=948065199]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.097
+offset_left = 64.0
+offset_top = -79.0
+offset_right = 162.018
+texture = ExtResource("5_44vre")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Estrelas2" type="TextureRect" parent="Background/Fase-2" unique_id=2038581933]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.097
+offset_left = 66.0
+offset_top = -79.0
+offset_right = 164.018
+texture = ExtResource("6_86df4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Estrelas3" type="TextureRect" parent="Background/Fase-2" unique_id=2140696359]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.097
+offset_left = 38.0
+offset_top = -57.0
+offset_right = 136.018
+offset_bottom = 22.0
+texture = ExtResource("7_gf34c")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Fase-3" type="TextureButton" parent="Background" unique_id=1978459023]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.028
+offset_left = 586.0
+offset_top = 427.0
+offset_right = 824.0
+offset_bottom = 595.84
+texture_normal = ExtResource("9_gf34c")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Estrelas" type="TextureRect" parent="Background/Fase-3" unique_id=1847756666]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.097
+offset_left = 62.0
+offset_top = -79.0
+offset_right = 160.018
+rotation = -0.0026226426
+texture = ExtResource("4_gjvgn")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Estrelas1" type="TextureRect" parent="Background/Fase-3" unique_id=72252607]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.097
+offset_left = 63.0
+offset_top = -79.0
+offset_right = 161.018
+texture = ExtResource("5_44vre")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Estrelas2" type="TextureRect" parent="Background/Fase-3" unique_id=753925575]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.097
+offset_left = 64.0
+offset_top = -79.0
+offset_right = 162.018
+texture = ExtResource("6_86df4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Estrelas3" type="TextureRect" parent="Background/Fase-3" unique_id=1237403011]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.097
+offset_left = 60.0
+offset_top = -79.0
+offset_right = 158.018
+texture = ExtResource("7_gf34c")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Fase-3-2" type="TextureButton" parent="Background/Fase-3" unique_id=899088060]
+layout_mode = 0
+offset_left = -9.0
+offset_top = -6.0
+offset_right = 250.0
+offset_bottom = 189.0
+texture_normal = ExtResource("10_to8k1")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Fase-4" type="TextureButton" parent="Background" unique_id=1274154968]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.028
+offset_left = 931.0
+offset_top = 198.0
+offset_right = 1250.0
+offset_bottom = 407.84
+texture_normal = ExtResource("11_ed4yv")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Fase-4-2" type="TextureButton" parent="Background/Fase-4" unique_id=245152850]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.028
+offset_left = 29.0
+offset_top = -10.0
+offset_right = 303.0
+offset_bottom = 217.56
+texture_normal = ExtResource("12_gs050")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Estrelas" type="TextureRect" parent="Background/Fase-4" unique_id=1389000952]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.097
+offset_left = 98.0
+offset_top = 235.0
+offset_right = 208.74298
+offset_bottom = 301.0
+rotation = -0.0019152228
+texture = ExtResource("4_gjvgn")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Estrelas1" type="TextureRect" parent="Background/Fase-4" unique_id=1134016023]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.097
+offset_left = 100.0
+offset_top = 235.0
+offset_right = 206.65302
+offset_bottom = 299.0
+texture = ExtResource("5_44vre")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Estrelas2" type="TextureRect" parent="Background/Fase-4" unique_id=1394616226]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.097
+offset_left = 92.0
+offset_top = 237.0
+offset_right = 217.65302
+offset_bottom = 297.0
+texture = ExtResource("6_86df4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Estrelas3" type="TextureRect" parent="Background/Fase-4" unique_id=1909933119]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.097
+offset_left = 62.0
+offset_top = 173.0
+offset_right = 50.742966
+offset_bottom = 236.0
+texture = ExtResource("7_gf34c")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="linha1" type="Sprite2D" parent="Background" unique_id=1947829431]
+position = Vector2(883, 428.99994)
+rotation = -0.1847324
+scale = Vector2(0.14348742, 0.08477018)
+skew = -0.089217305
+texture = ExtResource("13_gjvgn")
+
+[node name="linha2" type="Sprite2D" parent="Background" unique_id=663251412]
+position = Vector2(237.91376, 446.14685)
+rotation = -0.9453273
+scale = Vector2(0.10697016, 0.06935079)
+skew = -0.089217305
+texture = ExtResource("13_gjvgn")
+
+[node name="linha3" type="Sprite2D" parent="Background" unique_id=1199434331]
+position = Vector2(539, 369.99997)
+rotation = 0.78037196
+scale = Vector2(0.17572585, 0.094023615)
+skew = -0.089217305
+texture = ExtResource("13_gjvgn")
+
+[node name="Voltar" type="TextureButton" parent="Background" unique_id=163051755]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 17.0
+offset_right = 240.0
+offset_bottom = 125.0
+texture_normal = ExtResource("14_44vre")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Titulo" type="Sprite2D" parent="." unique_id=1551612079]
+position = Vector2(641, 90)
+scale = Vector2(0.188452, 0.21313326)
+texture = ExtResource("14_gjvgn")

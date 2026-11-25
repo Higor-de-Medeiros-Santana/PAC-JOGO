@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://c8yvfti1inhco"]
+
+[ext_resource type="Script" uid="uid://cr8n0j88x5ul4" path="res://scripts/menu.gd" id="1_el213"]
+[ext_resource type="Texture2D" uid="uid://cu5xxsemshmc2" path="res://Assets/imagens/Gemini_Generated_Image_lnhudflnhudflnhu.jpg" id="2_thu7x"]
+[ext_resource type="Texture2D" uid="uid://cll8w6t31aqxw" path="res://Assets/imagens/Botão dourado “Jogar” em estilo medieval.png" id="4_2af52"]
+[ext_resource type="Texture2D" uid="uid://dhb8u0yuxir2x" path="res://Assets/imagens/Botão Dourado do Modo Aventura.png" id="5_7ycwl"]
+[ext_resource type="Texture2D" uid="uid://d3l3kbtrnbkxw" path="res://Assets/imagens/Ícone Dourado de Volume em Alto-Relevo.png" id="6_rtd1e"]
+[ext_resource type="Texture2D" uid="uid://em77rqykdv1w" path="res://Assets/imagens/Botão decorativo de alto-falante mudo (1).png" id="7_6c8sk"]
+[ext_resource type="Texture2D" uid="uid://qydn38pdqgsi" path="res://Assets/imagens/Ícone Dourado de Livro Aberto.png" id="8_5p0sf"]
+[ext_resource type="Texture2D" uid="uid://i8ywrxxw0ihv" path="res://Assets/imagens/Botão Dourado de Conquistas.png" id="9_7t7qg"]
+[ext_resource type="Texture2D" uid="uid://dx0dqi2nam5af" path="res://Assets/imagens/Botão dourado “Sair” com porta aberta.png" id="10_l3wcu"]
+[ext_resource type="Texture2D" uid="uid://ccqigw6jndluh" path="res://Assets/imagens/Engrenagem Dourada com Manivela.png" id="11_i7htd"]
+[ext_resource type="Texture2D" uid="uid://lc0gyhkwonwu" path="res://Assets/imagens/Emblema Dourado DiceMind de Probabilidade.png" id="13_760fv"]
+[ext_resource type="Texture2D" uid="uid://6jnxyq8jc57" path="res://Assets/imagens/Dado Sorridente na Biblioteca (1).png" id="22_8fhjo"]
+
+[node name="MenuT10" type="Node2D" unique_id=575374808]
+script = ExtResource("1_el213")
+
+[node name="Background" type="TextureRect" parent="." unique_id=2014357992]
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 1283.0
+offset_bottom = 712.0
+texture = ExtResource("2_thu7x")
+expand_mode = 1
+
+[node name="EmblemaDouradoDiceMindDeProbabilidade" type="Sprite2D" parent="." unique_id=972820724]
+position = Vector2(633, 151.00002)
+scale = Vector2(0.31288964, 0.27776927)
+texture = ExtResource("13_760fv")
+
+[node name="Jogar" type="TextureButton" parent="." unique_id=1808264485]
+offset_left = 430.0
+offset_top = 270.0
+offset_right = 866.0
+offset_bottom = 390.0
+texture_normal = ExtResource("4_2af52")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Aventura" type="TextureButton" parent="." unique_id=1014162595]
+offset_left = 450.0
+offset_top = 362.0
+offset_right = 836.0
+offset_bottom = 481.0
+texture_normal = ExtResource("5_7ycwl")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Som" type="TextureButton" parent="." unique_id=1418672599]
+offset_left = -11.0
+offset_top = 16.0
+offset_right = 143.0
+offset_bottom = 89.0
+texture_normal = ExtResource("6_rtd1e")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Sem-som" type="TextureButton" parent="Som" unique_id=1506430501]
+visible = false
+layout_mode = 0
+offset_top = 2.0
+offset_right = 154.0
+offset_bottom = 75.0
+texture_normal = ExtResource("7_6c8sk")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Tutorial" type="TextureButton" parent="." unique_id=178317024]
+offset_left = 71.0
+offset_top = 15.0
+offset_right = 225.0
+offset_bottom = 88.0
+texture_normal = ExtResource("8_5p0sf")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Conquistas" type="TextureButton" parent="." unique_id=1602755904]
+offset_left = 409.0
+offset_top = 457.0
+offset_right = 872.0
+offset_bottom = 570.0
+texture_normal = ExtResource("9_7t7qg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Sair" type="TextureButton" parent="." unique_id=1586694393]
+offset_left = 456.0
+offset_top = 545.0
+offset_right = 825.0
+offset_bottom = 661.0
+texture_normal = ExtResource("10_l3wcu")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Surpresa" type="TextureButton" parent="." unique_id=483622795]
+offset_left = 1085.0
+offset_top = 524.0
+offset_right = 1281.0
+offset_bottom = 680.0
+texture_normal = ExtResource("11_i7htd")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="DadoSorri" type="Sprite2D" parent="." unique_id=1772556704]
+position = Vector2(300, 425)
+scale = Vector2(0.21794984, 0.2119715)
+texture = ExtResource("22_8fhjo")

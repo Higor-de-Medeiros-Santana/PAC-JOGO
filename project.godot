@@ -16,13 +16,14 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="Dice Mind: Mestre da Probabilidade"
 config/description="Jogo educativo de probabilidade e estatística"
-run/main_scene="uid://cp6hmdj22npel"
+run/main_scene="uid://c8yvfti1inhco"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
 [autoload]
 
-Gerenciador="*uid://cxa8bckt50iit"
-RunManager="*res://scripts/RunManager.gd"
+Gerenciador="*uid://bjcc03fwlupiv"
+Audio="*uid://coduqc0qplc4"
+Transicao="*uid://dkwxb7j4susb1"
 
 [display]
 
